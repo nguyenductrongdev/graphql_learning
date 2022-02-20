@@ -7,15 +7,25 @@ query_string = '''
         student(id: 3) {
             name
             age
+            readed_bood
+        }
+    }
+'''
+
+query_string_books = '''
+    query {
+        books {
+            title
         }
     }
 '''
 
 mutation_string = '''
     mutation {
-        createStudent(name: "Peter") {
+        createStudent(name: "Peter", age: 100) {
             student {
                 name
+                age
             }
             ok
         }
